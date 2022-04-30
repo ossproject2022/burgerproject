@@ -1,8 +1,22 @@
 # bergurproject
 ## title: burger 관리 프로그램
+___
 1. mini project 주제  
+**햄버거 crud 프로그램**  
+___
 2. mini project에 대한 소개  
+버거킹에 있는 메뉴를 관리하는 project   
++ 햄버거의 메뉴를 crud기능, save,load 등의 기능을 이용하여     
+**프로그램 관리자**가 메뉴의 수정 사항이 발생할 시 데이터를 관리할 수 있도록 하고,  
++ 검색 기능을 추가하여  
+**햄버거 구매를 원하는 사용자**가 햄버거를 쉽게 찾을 수 있도록 한다.  
+___
 3. image(pixabay 등 무료 이미지 활용)  
+ ![burger](https://blog.kakaocdn.net/dn/BlwVj/btqLSNHHmOC/AhsG3EhsksvR2xw3TtEXrK/img.png)
+
+특정 메뉴를 검색하여 찾을 수 있는 프로그램 제작
+
+___
 4. mini project가 가지고 있는 기능  
 버거킹에 있는 메뉴 관리하는 프로그램  
 * createBurger()  
@@ -28,15 +42,24 @@
 * selectMenu() 
  crud, 검색, 저장 함수 선택하는 기능  
 
+___
 5. 개발 환경 및 언어  
  c programming  
+___
 6. 팀 소개 및 팀원이 맡은 역할  
  #### 이산하 ####  
-학번 :  
-전공 :    
-역할 : 
+학번 :  21801047  
+전공 :  컴퓨터 공학과   
+역할 :    
+1. 프로그램 관리자  
+2. contributor로부터 pr받아서 정보 수정
+3. **wiki** 내용 구성
+       
  #### 김민상 ####
-학번 :  21900094
-전공 :  컴퓨터 공학과
-역할 :
+학번 :  21900094  
+전공 :  컴퓨터 공학과   
+역할 :  
+1. contributor   
+2. remote repository 정보 수정하여 pr 보내기  
+3. **"README.md"** 파일 관리
 
