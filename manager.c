@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "product.h"
 
+
 int updateBurger(Product *p,int now){
     int pick;
     listBurger(p,now);
