@@ -27,3 +27,22 @@ int updateBurger(Product *p,int now){
     }
     return 1;
 }
+int createBurger(Product *p,int now){
+    printf("이름은? ");
+    scanf("%[^\n]s",p[now].name);
+    getchar();
+    printf("가격은? ");
+    scanf("%d",&p[now].price);
+    getchar();
+    printf("빵 종류는? ");
+    scanf("%[^\n]s",p[now].bread);
+    getchar();
+    printf("패티 종류는? ");
+    scanf("%[^\n]s",p[now].patty);
+    getchar();
+    printf("소스 종류는? ");
+    scanf("%[^\n]s",p[now].sauce);
+    getchar();
+    now++;
+    return now;
+}    
