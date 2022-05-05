@@ -1,4 +1,5 @@
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "product.h"
@@ -64,4 +65,11 @@ int deleteBurger(Product *p,int now){
     }
     if(pick==0)return 0;
     return 1;
+
+void readBurger(Product p){            
+if(p.price!=-1){  
+printf("%s %d %s %s %s\n",p.name,p.price,
+p.bread,p.patty,p.sauce);
+}
+return ;
 }
