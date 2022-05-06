@@ -1,5 +1,6 @@
-#ifdef pro_h
+#ifndef pro_h
 #define pro_h
+
 typedef struct{
     char name[40];
     int price;
