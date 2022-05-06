@@ -74,3 +74,20 @@ p.bread,p.patty,p.sauce);
 }
 return ;
 }
+
+int  listBurger(Product *p,int now) {    
+    printf("no Name price bread patty sauce\n");;
+    int count=0;
+    for(int i=0;i<now;i++){
+    if(p[i].price==-1){
+        continue;
+    }
+    else if(p[i].price!=-1){
+        count++;
+        printf("%d ",count);
+        readBurger(p[i]);
+    }
+    }
+    if(count<=0)return 0;
+    return 1;
+}
