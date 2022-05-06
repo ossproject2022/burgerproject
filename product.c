@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "product.h"
 
+
+
 int createBurger(Product *p,int now){
     printf("이름은? ");
     scanf("%[^\n]s",p[now].name);
