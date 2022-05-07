@@ -1,9 +1,22 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "product.h"
 
 
+int selectMenu(){
+ int menu;
+ printf("\n*** Burger Project ***\n");
+ printf("1. 조회\n");
+ printf("2. 추가\n");
+ printf("3. 수정\n");
+ printf("4. 삭제\n");
+ printf("0. 종료\n\n");
+ printf("=> 원하는 메뉴는? ");
+ scanf("%d", &menu);
+ getchar();
+ printf("\n");
+ return menu;
+}
 int createBurger(Product *p,int now){
     printf("이름은? ");
     scanf("%[^\n]s",p[now].name);
@@ -22,9 +35,8 @@ int createBurger(Product *p,int now){
     getchar();
     now++;
     return now;
-}
-
-int updateBurger(Product *p,int now){
+}    
+int updateBurger(Product *p,int now){    
     int pick;
     listBurger(p,now);
     printf("번호는(취소: 0)? ");
@@ -49,8 +61,15 @@ int updateBurger(Product *p,int now){
     }
     return 1;
 }
+void readBurger(Product p){            
+if(p.price!=-1){  
+printf("%-28s %-5d  %-10s %-14s %-10s\n",p.name,p.price,
+p.bread,p.patty,p.sauce);
+}
+return ;
+}
 
-int deleteBurger(Product *p,int now){
+int deleteBurger(Product *p,int now){    
     int pick;
     int deleteok;
     listBurger(p,now);
@@ -65,17 +84,9 @@ int deleteBurger(Product *p,int now){
     }
     if(pick==0)return 0;
     return 1;
-
-void readBurger(Product p){            
-if(p.price!=-1){  
-printf("%s %d %s %s %s\n",p.name,p.price,
-p.bread,p.patty,p.sauce);
 }
-return ;
-}
-
 int  listBurger(Product *p,int now) {    
-    printf("no Name price bread patty sauce\n");;
+    printf("no Name                       price  bread         patty      sauce\n");;
     int count=0;
     for(int i=0;i<now;i++){
     if(p[i].price==-1){
@@ -83,7 +94,7 @@ int  listBurger(Product *p,int now) {
     }
     else if(p[i].price!=-1){
         count++;
-        printf("%d ",count);
+        printf("%d  ",count);
         readBurger(p[i]);
     }
     }
