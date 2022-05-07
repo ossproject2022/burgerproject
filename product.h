@@ -8,6 +8,7 @@ typedef struct{
     char patty[30];
     char sauce[30];
 }Product;
+
 int selectMenu();
 int createBurger(Product *p,int now);
 void readBurger(Product p);
