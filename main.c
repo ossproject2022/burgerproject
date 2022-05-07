@@ -26,6 +26,18 @@ int main(void){
             now=createBurger(p,now);
             if(now!=0)printf("=>추가됨!\n");
         }
+        else if (menu == 3){
+        result=updateBurger(p,now);
+            if(result==1){
+                printf("=>수정됨!\n");
+            }
+        }
+        else if (menu == 4){
+            result=deleteBurger(p,now);
+            if(result==1){
+            printf("삭제됨!\n");
+            }
+        }
 }
 free(p);
 return 0;
