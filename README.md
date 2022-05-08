@@ -31,13 +31,16 @@ ___
   새로운 버거 생성
   버거의 이름, 가격과 빵,패티, 소스의 종류를 추가할 수 있습니다.  
 * readBurger()  
+  <img src ="screenshots/read_image.png"></img>
   버거 정보 읽어들임. 
   특정 햄버거의 정보를 읽어들이는 기능입니다.  
   버거의 이름과 가격을 출력한 뒤, 사용자가 생성한 빵,패티,소스의 종류를 햄버거 모양으로 직관적으로 표시합니다.    
-* updateBurger()   
+* updateBurger()  
+  <img src ="screenshots/update_image.png"></img> 
   버거 정보 수정(이름, 가격, 빵 종류, 패티 종류, 소스 종류). 
   사용자가 자신이 원하는 대로 버거의 정보를 수정할 수 있습니다!  
 * deleteBurger()  
+  <img src ="screenshots/delete_image.png"></img>
    버거 삭제
    사용자가 원하는 버거를 삭제합니다.  
    버거의 번호를 선택하고 선택하는 명령어 1을 누르면 버거가 삭제됩니다.  
