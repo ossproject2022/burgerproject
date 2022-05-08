@@ -47,9 +47,13 @@ int updateBurger(Product *p,int now){
 	return 1;
 }
 void readBurger(Product p){            
-	if(p.price!=-1){  
-		printf("%8s %8d  %8s %8s %8s\n",p.name,p.price,
-				p.bread,p.patty,p.sauce);
+	if(p.price!=-1){
+		printf("name  : %s\n",p.name);
+		printf("price : %d\n",p.price);   
+		printf("bread : %s\n",p.bread);
+		printf("patty : %s\n",p.patty);
+		printf("sauce : %s\n",p.sauce);
+		printf("bread : %s\n",p.bread);
 	}
 	return ;
 }
@@ -71,7 +75,7 @@ int deleteBurger(Product *p,int now){
 	return 1;
 }
 int  listBurger(Product *p,int now) {    
-	printf("no    Name   price   bread   patty   sauce\n");;
+	printf("no\n");;
 	int count=0;
 	for(int i=0;i<now;i++){
 		if(p[i].price==-1){
