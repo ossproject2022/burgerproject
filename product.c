@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "product.h"
 
 int createBurger(Product *p,int now){
@@ -46,9 +47,34 @@ int updateBurger(Product *p,int now){
 	}
 	return 1;
 }
-void readBurger(Product p){            
-	if(p.price!=-1){  
-		printf("%13s %13d    %13s %13s %13s\n",p.name,p.price,p.bread,p.patty,p.sauce);
+void readBurger(Product p){
+    
+    long bread_l =strlen(p.bread);
+    long patty_l =strlen(p.patty);
+    long sauce_l =strlen(p.sauce);
+   // printf("%lu, %lu, %lu\n", bread_l,patty_l,sauce_l);
+	if(p.price!=-1){
+        printf(" name: %s \n price: %d \n",p.name,p.price);
+        printf("(￣￣￣￣￣￣￣￣￣￣￣)\n");
+
+        printf(" | %s",p.bread);
+        for(int i = 0;i<(27-bread_l)/3;i++){
+            printf("  ");
+        }
+        printf(" |\n");
+
+        printf(" | %s",p.patty);
+        for(int i = 0;i<(27-patty_l)/3;i++){
+            printf("  ");
+        }
+        printf(" |\n");
+        
+        printf(" | %s",p.sauce);
+        for(int i = 0;i<(27-sauce_l)/3;i++){
+            printf("  ");
+        }
+        printf(" |\n");
+        printf("(＿＿＿＿＿＿＿＿＿＿＿)\n");
 	}
 	return ;
 }
@@ -71,15 +97,15 @@ int deleteBurger(Product *p,int now){
 }
 int  listBurger(Product *p,int now) {
 
-	printf("%3s %13s %13s %13s %13s %13s\n","no","Name","price","bread","patty","sauce");
-	int count=0;
+   
+    int count=0;
 	for(int i=0;i<now;i++){
 		if(p[i].price==-1){
 			continue;
 		}
 		else if(p[i].price!=-1){
 			count++;
-			printf("%3d ",count);
+			printf("\n no %3d\n",count);
 			readBurger(p[i]);
 		}
 	}
