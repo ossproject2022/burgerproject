@@ -27,6 +27,7 @@ ___
 4. mini project가 가지고 있는 기능 <br>  
 버거킹에 있는 메뉴 관리하는 프로그램  
 * createBurger()  
+  <img src ="screenshots/create_image.png"></img>
   새로운 버거 생성
   버거의 이름, 가격과 빵,패티, 소스의 종류를 추가할 수 있습니다.  
 * readBurger()  
