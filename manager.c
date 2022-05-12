@@ -46,3 +46,23 @@ if(fp==NULL){
     }
     return i;
 }
+
+int searchName(Product *p,int now){ 
+int scnt=0;
+char search[20];
+    printf("검색할 이름은? ");
+    scanf("%[^\n]s",search);
+    printf("Name price bread patty sauce\n");
+    printf("================================\n");
+    for(int i=0;i<now;i++){
+    if(p[i].price==-1)continue;
+    if(strstr(p[i].name,search)){
+        scnt++;
+        readBurger(p[i]);
+    }
+    }
+    if(scnt==0){
+        return 0;
+    }
+    return 1;
+}
