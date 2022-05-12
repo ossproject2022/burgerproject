@@ -66,3 +66,26 @@ char search[20];
     }
     return 1;
 }
+
+int searchPrice(Product *p,int now){
+int scnt=0;
+int min;
+int max;
+    printf("검색할 최소 가격은? ");
+    scanf("%d",&min);
+    printf("검색할 최대 가격은? ");
+    scanf("%d",&max);
+    printf("Name comment weight price delivery\n");
+    printf("================================\n");
+    for(int i=0;i<now;i++){
+    if(p[i].price==-1)continue;
+    if((p[i].price>=min)&&(p[i].price<=max)){
+        scnt++;
+        readBurger(p[i]);
+    }
+    }
+    if(scnt==0){
+        return 0;
+    }
+    return scnt;
+}  

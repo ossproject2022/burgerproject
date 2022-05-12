@@ -39,6 +39,22 @@ int main(void){
 				printf("삭제됨!\n");
 			}
 		}
+        else if(menu==5){
+        saveData(p,now);
+                printf("저장됨!\n");
+        }
+        else if(menu==6){
+            result=searchName(p,now);
+            if(result==0){
+                printf("검색된 데이터 없음!\n");
+            }
+        }
+        else if(menu==7){
+            result=searchPrice(p,now);
+            if(result==0){
+                printf("검색된 데이터 없음!\n");
+            }
+        }
 	}
 	free(p);
 	return 0;
