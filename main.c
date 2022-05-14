@@ -4,6 +4,7 @@
 #include "manager.h"
 #include "product.h"
 
+
 int main(void){
 
 	Product *p=(Product *)malloc(sizeof(Product)*20);
