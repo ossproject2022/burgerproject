@@ -63,6 +63,12 @@ int main(void){
             }
 
         }
+        
+    else if(menu==9){
+            burgerKing();
+        printf("\n");
+
+        }
     }
     free(p);
     return 0;

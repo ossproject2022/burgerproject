@@ -29,7 +29,7 @@ if(fp==NULL){
         fscanf(fp,"%[^\t]s",p[i].name);
         if(feof(fp)){
             
-            break;
+            break;
         }
         fscanf(fp," %d",&p[i].price);
         fscanf(fp," %[^\t]s",p[i].bread);
@@ -171,4 +171,18 @@ char ssauce[20];
      return 0;
  }
  return 1;
+}
+
+void burgerKing(){
+    
+    const int max = 1024;
+    char line[max];
+    char *pLine;
+    FILE *in = fopen("burgerKing.txt", "r");
+    while (!feof(in)) {
+        pLine = fgets(line, max, in);
+        printf("%s", pLine);
+    }
+    fclose(in);
+    
 }
