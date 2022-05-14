@@ -35,7 +35,9 @@ if(fp==NULL){
         fscanf(fp," %[^\t]s",p[i].bread);
         fscanf(fp," %[^\t]s",p[i].patty);
         fscanf(fp,"%[^\n]s",p[i].sauce);
+
     fgets(buffer,sizeof(buffer),fp);
+
  }
  }
     fclose(fp);
@@ -88,7 +90,7 @@ int max;
     return scnt;
  }
 
-   int searchBurger(Product *p,int now){
+int searchBurger(Product *p,int now){
 int scnt=0;
 int bcount=0;
 int pcount=0;
@@ -96,77 +98,77 @@ int scount=0;
 char sbread[20];
 char spatty[20];
 char ssauce[20];
-    printf("검색할 빵 종류는? (검색 X: 0)");
-    scanf("%[^\n]s",sbread);
-    getchar();
-    printf("검색할 패티 종류는? (검색 X: 0)");
-    scanf("%[^\n]s",spatty);
-    getchar();
-    printf("검색할 소스 종류는? (검색 X: 0)");
-    scanf("%[^\n]s",ssauce);
-    getchar();
-    printf("Name price bread patty sauce\n");
-    printf("================================\n");
-    for(int i=0;i<now;i++){
-    if(p[i].price==-1)continue;
-    if(strcmp(sbread,"0")==0){
-      bcount=1;
-    }
-    if(strcmp(spatty,"0")==0){
-        pcount=1;
-    }
-    if(strcmp(ssauce,"0")==0){
-        scount=1;
-    }
-    if(bcount==0&&pcount==0&&scount==0){
-       if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==0&&pcount==0&&scount==1){
-        if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==0&&pcount==1&&scount==0){
-        if(strstr(p[i].bread,sbread)&&strstr(p[i].sauce,ssauce)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==0&&pcount==1&&scount==1){
-       if(strstr(p[i].bread,sbread)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==1&&pcount==0&&scount==0){
-       if(strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==1&&pcount==0&&scount==1){
-       if(strstr(p[i].patty,spatty)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    else if(bcount==1&&pcount==1&&scount==0){
-       if(strstr(p[i].sauce,ssauce)){
-        scnt++;
-        readBurger(p[i]);
-    }
-    }
-    /*if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
-        scnt++;
-        readBurger(p[i]);
-    }*/
-    }
-    if(scnt==0){
-        return 0;
-    }
-    return 1;
+ printf("검색할 빵 종류는? (검색 X: 0)");
+ scanf("%[^\n]s",sbread);
+ getchar();
+ printf("검색할 패티 종류는? (검색 X: 0)");
+ scanf("%[^\n]s",spatty);
+ getchar();
+ printf("검색할 소스 종류는? (검색 X: 0)");
+ scanf("%[^\n]s",ssauce);
+ getchar();
+ printf("Name price bread patty sauce\n");
+ printf("================================\n");
+ for(int i=0;i<now;i++){
+ if(p[i].price==-1)continue;
+ if(strcmp(sbread,"0")==0){
+   bcount=1;
+ }
+ if(strcmp(spatty,"0")==0){
+     pcount=1;
+ }
+ if(strcmp(ssauce,"0")==0){
+     scount=1;
+ }
+ if(bcount==0&&pcount==0&&scount==0){
+    if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==0&&pcount==0&&scount==1){
+     if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==0&&pcount==1&&scount==0){
+     if(strstr(p[i].bread,sbread)&&strstr(p[i].sauce,ssauce)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==0&&pcount==1&&scount==1){
+    if(strstr(p[i].bread,sbread)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==1&&pcount==0&&scount==0){
+    if(strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==1&&pcount==0&&scount==1){
+    if(strstr(p[i].patty,spatty)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ else if(bcount==1&&pcount==1&&scount==0){
+    if(strstr(p[i].sauce,ssauce)){
+     scnt++;
+     readBurger(p[i]);
+ }
+ }
+ /*if(strstr(p[i].bread,sbread)&&strstr(p[i].patty,spatty)&&strstr(p[i].sauce,ssauce)){
+     scnt++;
+     readBurger(p[i]);
+ }*/
+ }
+ if(scnt==0){
+     return 0;
+ }
+ return 1;
 }
