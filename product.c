@@ -53,28 +53,29 @@ void readBurger(Product p){
     long patty_l =strlen(p.patty);
     long sauce_l =strlen(p.sauce);
    // printf("%lu, %lu, %lu\n", bread_l,patty_l,sauce_l);
+    
 	if(p.price!=-1){
         printf(" name: %s \n price: %d \n",p.name,p.price);
-        printf("(￣￣￣￣￣￣￣￣￣￣￣)\n");
+        printf("(￣￣￣￣￣￣￣￣￣￣￣￣)\n");
 
         printf(" | %s",p.bread);
-        for(int i = 0;i<(27-bread_l)/3;i++){
+        for(int i = 0;i<(30-bread_l)/3;i++){
             printf("  ");
         }
         printf(" |\n");
 
         printf(" | %s",p.patty);
-        for(int i = 0;i<(27-patty_l)/3;i++){
+        for(int i = 0;i<(30-patty_l)/3;i++){
             printf("  ");
         }
         printf(" |\n");
         
         printf(" | %s",p.sauce);
-        for(int i = 0;i<(27-sauce_l)/3;i++){
+        for(int i = 0;i<(30-sauce_l)/3;i++){
             printf("  ");
         }
         printf(" |\n");
-        printf("(＿＿＿＿＿＿＿＿＿＿＿)\n");
+        printf("(＿＿＿＿＿＿＿＿＿＿＿＿)\n");
 	}
 	return ;
 }
