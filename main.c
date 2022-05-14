@@ -4,12 +4,13 @@
 #include "manager.h"
 #include "product.h"
 
+
 int main(void){
 
 	Product *p=(Product *)malloc(sizeof(Product)*20);
 	int menu;
 	int now=0;
-
+	now=loadData(p);
 	int result;
 	while (1){
 		menu = selectMenu();
@@ -54,6 +55,13 @@ int main(void){
             if(result==0){
                 printf("검색된 데이터 없음!\n");
             }
+        }
+	else if(menu==8){
+            result=searchBurger(p,now);
+            if(result==0){
+                printf("검색된 데이터 없음!\n");
+            }
+
         }
 	}
 	free(p);
