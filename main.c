@@ -10,7 +10,7 @@ int main(void){
 	Product *p=(Product *)malloc(sizeof(Product)*20);
 	int menu;
 	int now=0;
-
+	now=loadData(p);
 	int result;
 	while (1){
 		menu = selectMenu();
